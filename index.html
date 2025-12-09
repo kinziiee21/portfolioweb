@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <link rel="stylesheet" href="pstyle.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="logo" href="index.html">Kinza Manjiyani</a>
+
+      <button id="hamburger" class="hamburger" aria-label="Toggle menu">☰</button>
+
+      <ul id="navLinks" class="nav-links">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌓</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero container fade-in">
+      <div class="hero-content">
+        <h1>Hi, I’m <span class="accent">Kinza</span></h1>
+        <h2 class="sub">Front-End Developer</h2>
+        <p class="lead">I build responsive, accessible, and interactive web experiences using modern HTML, CSS and JavaScript.</p>
+        <div class="cta">
+          <a class="btn" href="projects.html">See Projects</a>
+          <a class="btn-outline" href="contact.html">Contact</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="kinza.jpeg" alt="Photo of Your Name" />
+      </div>
+    </section>
+
+    <!-- ABOUT PREVIEW -->
+    <section class="container section about-preview">
+      <div class="two-col">
+        <div>
+          <h3>About Me</h3>
+          <p>I’m a front-end developer focused on building clean user interfaces and learning modern JavaScript frameworks. I love turning designs into functional code.</p>
+          <a class="link" href="about.html">Read more →</a>
+        </div>
+        <aside class="card contact-card">
+          <h4>Contact</h4>
+          <p>kinzamanjiyani@gmail.com</p>
+          <p>City, Country</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SKILLS PREVIEW -->
+    <section class="container section">
+      <h3>Skills</h3>
+      <div class="skills-grid">
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">Bootstrap</div>
+        <div class="skill-card">React</div>
+        <div class="skill-card">Git</div>
+      </div>
+      <div class="center"><a class="btn" href="skills.html">View All Skills</a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>YourName</h4>
+        <p>© <span id="yearIndex"></span> Kinza Manjiyani. All rights reserved.</p>
+      </div>
+      <div>
+        <h4>Email</h4>
+        <p>kinzamanjiyani@gmailcom</p>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <p class="socials">GitHub · LinkedIn · Twitter</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="topBtn" class="top-btn" title="Go to top">⬆</button>
+
+  <script src="pscript.js"></script>
+</body>
+</html>

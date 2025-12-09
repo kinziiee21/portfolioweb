@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Your Name</title>
+  <link rel="stylesheet" href="pstyle.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="logo" href="index.html">Kinza Manjiyani</a>
+      <button id="hamburgerProjects" class="hamburger" aria-label="Toggle menu">☰</button>
+      <ul id="navLinksProjects" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a class="active" href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button id="themeToggleProjects" class="theme-toggle" aria-label="Toggle theme">🌓</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section>
+      <h1>Projects</h1>
+      <p>Click a project to open details.</p>
+
+      <div class="projects-grid">
+        <article class="project-card" onclick="openModal(1)">
+          <img src="indexpage.png" alt="Project one screenshot">
+          <h3>Project One</h3>
+          <p>Small app built with HTML, CSS and JS.</p>
+        </article>
+
+        <article class="project-card" onclick="openModal(2)">
+          <img src="p2.png" alt="Project two screenshot">
+          <h3>Project Two</h3>
+          <p>Responsive landing page using Bootstrap.</p>
+        </article>
+
+        <article class="project-card" onclick="openModal(3)">
+          <img src="p3.png" alt="Project three screenshot">
+          <h3>Project Three</h3>
+          <p>React demo app with component architecture.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Kinza Manjiyani</h4>
+        <p>© <span id="yearProjects"></span> Kinza Manjiyani.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="pscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Your Name</title>
+  <link rel="stylesheet" href="pstyle.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="logo" href="index.html">Kinza Manjiyani</a>
+      <button id="hamburgerContact" class="hamburger" aria-label="Toggle menu">☰</button>
+      <ul id="navLinksContact" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+      <button id="themeToggleContact" class="theme-toggle" aria-label="Toggle theme">🌓</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section>
+      <h1>Contact Me</h1>
+      <p>Prefer to email? kinzamanjiyani@gmail.com. Or send a message using the form below:</p>
+
+      <form id="contactForm" class="contact-form" onsubmit="return handleSubmit(event)">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your message" rows="6" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Kinza Manjiyani</h4>
+        <p>© <span id="yearContact"></span> Kinza Manjiyani.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="pscript.js"></script>
+</body>
+</html>
