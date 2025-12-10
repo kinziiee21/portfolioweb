@@ -247,6 +247,8 @@ img, .hero-image img, .project-card img, .about-img img {
 body.menu-open {
   overflow-x: hidden; /* avoid horizontal scroll when menu open */
 }
+.skills-cta { margin-top: 16px; display:flex; justify-content:flex-start; }
+
 
 
 
