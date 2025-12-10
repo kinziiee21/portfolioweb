@@ -158,4 +158,95 @@ img, .hero-image img, .project-card img, .about-img img {
   .btn, .btn-outline { padding: 10px 12px; font-size: 14px; }
 }
 
+/* ===== Navbar fixes (paste near the end of style.css) ===== */
+
+/* Make navbar items align nicely and wrap when needed */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  position: relative;
+  z-index: 60; /* ensure above mobile menu */
+}
+
+/* Desktop nav links */
+.nav-links {
+  display: flex;
+  gap: 14px;
+  margin-left: auto;
+  align-items: center;
+}
+
+/* Make nav links look tappable */
+.nav-links li a {
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: background .15s, color .15s, transform .08s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Active / hover */
+.nav-links li a.active,
+.nav-links li a:hover {
+  color: var(--accent);
+  background: rgba(77,160,255,0.06);
+  transform: translateY(-1px);
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none; /* shown only on small screens */
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+/* Mobile menu visuals */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;               /* hidden by default on mobile */
+    position: absolute;
+    top: 64px;                   /* drop-down below nav */
+    right: 12px;
+    left: 12px;
+    gap: 6px;
+    flex-direction: column;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 12px 36px rgba(3,10,30,0.18);
+    background: var(--card);
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  /* make nav list items full width so they are finger-friendly */
+  .nav-links li {
+    width: 100%;
+  }
+  .nav-links li a {
+    width: 100%;
+    padding: 12px 14px;
+  }
+
+  /* show hamburger */
+  .hamburger { display: block; }
+
+  /* ensure logo doesn't wrap weirdly */
+  .logo { z-index: 70; }
+}
+
+/* small polish: ensure nav doesn't overlap content when open */
+body.menu-open {
+  overflow-x: hidden; /* avoid horizontal scroll when menu open */
+}
+
+
 
