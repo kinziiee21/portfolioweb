@@ -96,3 +96,66 @@ body.dark .logo{color:#e6eef6}
   .hamburger{display:block}
   .nav-links.show{display:flex}
 }
+
+/* ===== Mobile fixes (paste at end of style.css) ===== */
+
+/* Make all images responsive */
+img, .hero-image img, .project-card img, .about-img img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ensure container padding on small screens */
+.container {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+/* Mobile breakpoints */
+@media (max-width: 900px) {
+  /* Stack hero vertically on smaller screens */
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 36px 0;
+  }
+  .hero-image img { width: 220px; height: 220px; }
+
+  /* Two column layouts -> single column */
+  .two-col, .about-section, .two-column {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Mobile specific styling: 768px and below */
+@media (max-width: 768px) {
+  /* Make hero text slightly smaller on phones */
+  .hero h1 { font-size: 28px; line-height: 1.15; }
+  .hero .sub { font-size: 16px; }
+  .lead { font-size: 15px; }
+
+  /* Projects grid smaller cards */
+  .projects-grid { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; }
+
+  /* Make nav links hidden by default and controlled by hamburger */
+  .nav-links { display: none; position: absolute; top: 64px; right: 12px; left: 12px; background: var(--card); padding: 12px; border-radius: 8px; flex-direction: column; box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
+  .nav-links.show { display: flex; }
+
+  /* Show hamburger */
+  .hamburger { display: block; }
+
+  /* Make footer stack nicely */
+  .footer-grid { flex-direction: column; gap: 10px; text-align: center; }
+}
+
+/* Extra small phones */
+@media (max-width: 420px) {
+  .hero-image img { width: 180px; height: 180px; }
+  .hero h1 { font-size: 22px; }
+  .btn, .btn-outline { padding: 10px 12px; font-size: 14px; }
+}
+
+
